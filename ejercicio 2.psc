@@ -3,16 +3,19 @@ Algoritmo ejercicio2
 	Leer num1
 	Escribir "Ingrese el segundo número"
 	Leer num2
-	Escribir "Ingrese la operación (+ ó -)"
+	Escribir "Ingrese la operación (+, -, * ó /)"
 	Leer op
-	Si op == "+" Entonces
-		Escribir "El resultado de la suma es: ", num1 + num2
-	SiNo
-		Si op == "-" Entonces
-			Escribir "El resultado de la resta es: ", num1 - num2
-		SiNo
-			Escribir "Acción inválida"
-		Fin Si
-	Fin Si
 	
+	Segun op Hacer
+		"+":
+			Escribir "El resultado de la suma es: ", num1 + num2
+		"-":
+			Escribir "El resultado de la resta es: ", num1 - num2
+		"*":
+			Escribir "El resultado de la multiplicación es: ", num1 * num2
+		"/":
+			Escribir "El resultado de la división es: ", num1 / num2
+		De Otro Modo:
+			Escribir "Escriba una operación válida"
+	Fin Segun
 FinAlgoritmo
